@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --amarelo: #ffcc00;
+    --amarelo-escuro: #e6b800;
+    --bg: #141414;
+    --bg2: #1e1e1e;
+    --bg3: #2a2a2a;
+    --texto: #f0f0f0;
+    --texto-suave: #aaa;
+    --vermelho: #e03030;
+    --verde: #00cc66;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--texto);
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER GERAL */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1#titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--amarelo);
+    text-align: center;
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+p#conteudo {
+    text-align: center;
+    color: var(--texto-suave);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* FORMULÁRIO DE BUSCA */
+form {
+    background: var(--bg2);
+    border: 1px solid #2e2e2e;
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.campo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--amarelo);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: var(--bg);
+    border: 1px solid #3a3a3a;
+    color: var(--texto);
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+input:focus { outline: none; border-color: var(--amarelo); }
+
+button {
+    background-color: var(--amarelo);
+    color: #000;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
+}
+
+button:hover { background-color: var(--amarelo-escuro); transform: translateY(-1px); }
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 28px;
+    background-color: var(--bg2);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2e2e2e;
+}
+
+th, td {
+    padding: 13px 16px;
+    text-align: left;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 14px;
+}
+
+th {
+    background-color: var(--amarelo);
+    color: #000;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: #242424; }
+
+.disponivel { color: var(--verde); font-weight: 700; }
+.indisponivel { color: var(--vermelho); font-weight: 700; }
+
+/* CONTAINER DELETAR */
+.container-sm {
+    max-width: 520px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--bg2);
+    border-radius: 14px;
+    border: 1px solid #2e2e2e;
+}
+
+/* RESULTADOS */
+.sucesso { color: var(--verde); font-size: 20px; }
+.erro { color: var(--vermelho); font-size: 20px; }
+
+a { color: var(--amarelo); font-weight: 600; }

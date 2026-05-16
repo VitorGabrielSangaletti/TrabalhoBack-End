@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deletar Produto - Burguer</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CardapioDelete.css">
+    <style>
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 20px;
+            padding: 40px;
+            background-color: var(--bg2);
+            border-radius: 14px;
+            border: 1px solid #2e2e2e;
+        }
+        form { background: none; border: none; padding: 0; display: block; }
+        .campo { margin-bottom: 20px; }
+        button {
+            background-color: #e03030;
+            color: white;
+            width: 100%;
+            padding: 13px;
+            font-size: 15px;
+        }
+        button:hover { background-color: #c02020; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Deletar Produto</h1>
+        <p id="conteudo">Digite o ID do produto que deseja excluir</p>
+
+        <form action="Delete.php" method="post">
+            <div class="campo">
+                <label for="id">ID do Produto</label>
+                <input type="number" name="id" id="id" required placeholder="Ex: 5">
+            </div>
+            <button type="submit" onclick="return confirm('Tem certeza? Essa ação não pode ser desfeita!')">
+                Excluir Produto
+            </button>
+        </form>
+
+        <br>
+        <a href="Home.html">← Voltar</a>
+    </div>
+</body>
+</html>

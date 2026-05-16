@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atualizar Produto - Burguer</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1 id="titulo">Atualizar Item</h1>
+        <p>Preencha apenas os campos que deseja alterar</p>
+
+        <form action="Update.php" method="post"> 
+            <div class="campo">
+                <label>ID do Produto</label>
+                <input type="text" name="id" placeholder="Ex: 5" required>
+            </div>
+            <div class="campo">
+                <label>Novo Nome</label>
+                <input type="text" name="nome" placeholder="Ex: Cheese Bacon Duplo">
+            </div>
+            <div class="campo">
+                <label>Novo Preço (R$)</label>
+                <input type="text" name="preco" placeholder="Ex: 29.90">
+            </div>
+            <div class="campo">
+                <label>Nova Descrição</label>
+                <textarea name="descricao" rows="3" placeholder="Nova descrição..."></textarea>
+            </div>
+            <div class="campo">
+                <label>Nova Categoria</label>
+                <input type="text" name="categoria" placeholder="Ex: Hambúrgueres">
+            </div>
+            <div class="campo">
+                <label>Disponível?</label>
+                <select name="disponivel">
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+            </div>
+            <button type="submit">Atualizar Produto</button>
+        </form>
+
+        <br>
+        <a href="Home.html">← Voltar</a>
+    </div>
+</body>
+</html>

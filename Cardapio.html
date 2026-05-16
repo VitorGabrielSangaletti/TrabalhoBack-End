@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardápio - Burguer</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CardapioDelete.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="titulo">Cardápio</h1>
+        <p id="conteudo">Lista completa de produtos cadastrados</p>
+
+        <form action="Read.php" method="post">
+            <div class="campo">
+                <label>Buscar por nome (opcional)</label>
+                <input type="text" name="busca" placeholder="Ex: Cheeseburger">
+            </div>
+            <button type="submit">Buscar</button>
+            <button type="submit" name="mostrar_todos" value="1">Mostrar Todos </button>
+        </form>
+    </div>
+
+</body>
+</html>

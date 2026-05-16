@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --amarelo: #ffcc00;
+    --amarelo-escuro: #e6b800;
+    --bg: #141414;
+    --bg2: #1e1e1e;
+    --bg3: #2a2a2a;
+    --texto: #f0f0f0;
+    --texto-suave: #aaa;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+.container {
+    background: var(--bg2);
+    padding: 40px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 480px;
+    border: 1px solid #2e2e2e;
+}
+
+h1#titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    color: var(--amarelo);
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+p {
+    text-align: center;
+    color: var(--texto-suave);
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.campo {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--amarelo);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #3a3a3a;
+    background: var(--bg);
+    color: var(--texto);
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--amarelo);
+}
+
+textarea { resize: vertical; }
+
+button[type="submit"] {
+    width: 100%;
+    margin-top: 8px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: var(--amarelo);
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    letter-spacing: 0.3px;
+}
+
+button[type="submit"]:hover {
+    background: var(--amarelo-escuro);
+    transform: translateY(-1px);
+}
+
+a { color: var(--amarelo); font-weight: 600; }
